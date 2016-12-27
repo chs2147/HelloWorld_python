@@ -10,7 +10,16 @@ target_dir = '/Users/chs2147/Documents/temp'
 # Target file name
 today = target_dir + os.sep + time.strftime('%Y%m%d')
 now = time.strftime('%H%M%S')
-target = today + os.sep + now + '.zip'
+
+# Take a comment from console input
+comment = raw_input('Enter a comment --> ')
+
+# Check comment
+if len(comment) == 0:
+    target = today + os.sep + now + '.zip'
+else:
+    # Replace space character to under stroke from input text
+    target = today + os.sep + now + '_' + comment.replace(' ','_') + '.zip'
 
 # Create target directory
 if not os.path.exists(today):
