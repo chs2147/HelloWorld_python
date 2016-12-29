@@ -1,6 +1,9 @@
 class SchoolMember:
     '''Represents any school member.'''
 
+    name = ''
+    age = 0
+
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -12,6 +15,8 @@ class SchoolMember:
 
 class Teacher(SchoolMember):
     '''Represents a teacher.'''
+
+    salary = 0
 
     def __init__(self, name, age, salary):
         SchoolMember.__init__(self, name, age)
@@ -25,6 +30,8 @@ class Teacher(SchoolMember):
 
 class Student(SchoolMember):
     '''Represents a student.'''
+
+    marks = 0
 
     def __init__(self, name, age, marks):
         SchoolMember.__init__(self, name, age)
